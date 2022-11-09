@@ -9,6 +9,6 @@ def valid_emails(strings: List[str]) -> List[str]:
     def is_valid_email(email: str) -> bool:
         return bool(valid_email_regex.fullmatch(email)) # переиспользуем объект сформированный compile
 
-    valid_emails = [email for email in strings if is_valid_email(email)]
+    valid_emails = [email for email in strings if is_valid_email(email)] # list comprehension при создании списка работает быстрее обычного for loop
 
     return valid_emails
